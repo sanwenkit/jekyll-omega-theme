@@ -276,6 +276,24 @@ pre {
 .text-italic {
   font-style: italic;
 }
+/* ---------------- */
+/* ---- TABLE ----- */
+/* ---------------- */
+table {
+    border-collapse: collapse;
+    empty-cells: hide;
+}
+table, td, th {
+    border: 1px solid #A1A1A1;
+}
+td, th {
+    padding:3px 7px 2px 7px;
+}
+th {
+    padding-top:5px;
+    padding-bottom:4px;
+    background-color: #eef;
+}
 /* Responsive typography */
 @media (max-width: 767px) {
   h1 {
@@ -544,6 +562,31 @@ html {
   margin-bottom: 24px;
   border-radius: 5px;
 }
+/* --------- */
+/* COPYLEFT */
+/* --------- */
+.copyleft {
+  display: block;
+  padding: 10px 20px;
+  margin: 30px 0 20px;
+  line-height: 24px;
+  font-size: 13px;
+  border-radius: 10px;
+  background-color: #eef;
+}
+.copyleft .cc {
+  font-size: 15px;
+  font-weight: 600;
+  zoom: 1;
+}
+.copyleft .cc:before,
+.copyleft .cc:after {
+  content: "";
+  display: table;
+}
+.copyleft .cc:after {
+  clear: both;
+}
 /* - Post Share - */
 .post-share {
   margin-bottom: 48px;
@@ -600,49 +643,6 @@ html {
 #footer .container {
   position: relative;
   z-index: 2;
-}
-/* --------- */
-/* COPYLEFT */
-/* --------- */
-.copyleft {
-  display: block;
-  padding: 10px 20px;
-  margin: 30px 0 20px;
-  line-height: 24px;
-  font-size: 13px;
-  border-radius: 10px;
-  background-color: #eef;
-}
-.copyleft .cc {
-  font-size: 15px;
-  font-weight: 600;
-  zoom: 1;
-}
-.copyleft .cc:before,
-.copyleft .cc:after {
-  content: "";
-  display: table;
-}
-.copyleft .cc:after {
-  clear: both;
-}
-/* ---------------- */
-/* ---- TABLE ----- */
-/* ---------------- */
-table {
-    border-collapse: collapse;
-    empty-cells: hide;
-}
-table, td, th {
-    border: 1px solid #A1A1A1;
-}
-td, th {
-    padding:3px 7px 2px 7px;
-}
-th {
-    padding-top:5px;
-    padding-bottom:4px;
-    background-color: #eef;
 }
 /* ---------------- */
 /* THEME UTILITITES */
