@@ -17,7 +17,7 @@
                 {{ post.content | xml_escape }}
                 ]]>
             </content>
-            <breadCrumb title="{{ post.category | cdata_escape }}" url="{{ site.url }}/{{ post.category | cdata_escape}}" />
+            <breadCrumb title="{{ post.category | cdata_escape }}" url="{{ site.url }}/categories/#{{ post.category | cdata_escape}}" />
         </display>
     </data>
     </url>
