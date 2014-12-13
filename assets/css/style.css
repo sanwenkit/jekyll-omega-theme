@@ -280,19 +280,19 @@ pre {
 /* ---- TABLE ----- */
 /* ---------------- */
 table {
-    border-collapse: collapse;
-    empty-cells: hide;
+  border-collapse: collapse;
+  empty-cells: hide;
 }
 table, td, th {
-    border: 1px solid #A1A1A1;
+  border: 1px solid #A1A1A1;
 }
 td, th {
-    padding:3px 7px 2px 7px;
+  padding:3px 7px 2px 7px;
 }
 th {
-    padding-top:5px;
-    padding-bottom:4px;
-    background-color: #eef;
+  padding-top:5px;
+  padding-bottom:4px;
+  background-color: #eef;
 }
 /* Responsive typography */
 @media (max-width: 767px) {
@@ -459,6 +459,10 @@ blockquote:before {
 #masthead a,
 #footer p,
 #masthead p {
+  color: #fff;
+}
+:: selection {
+  background: rgba(240,17,68,0.8);
   color: #fff;
 }
 /* ----------- */
