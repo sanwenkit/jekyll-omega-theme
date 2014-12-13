@@ -461,7 +461,11 @@ blockquote:before {
 #masthead p {
   color: #fff;
 }
-:: selection {
+::selection {
+  background: rgba(240,17,68,0.8);
+  color: #fff;
+}
+::-moz-selection {
   background: rgba(240,17,68,0.8);
   color: #fff;
 }
