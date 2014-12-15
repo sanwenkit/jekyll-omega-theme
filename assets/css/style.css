@@ -413,6 +413,9 @@ a:hover {
 blockquote:before {
   /*background: #57ad68;*/
 }
+blockquote:hover {
+  border-left: 5px solid #f25962;
+}
 .post-title {
   color: #807f83;
 }
