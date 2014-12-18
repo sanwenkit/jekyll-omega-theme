@@ -1,5 +1,5 @@
 title:            Jekyll Omega Theme
-description:      "咯咯咯咯"
+description:      "A beautiful theme for jekyll"
 logo:             omikron.png
 disqus_shortname:
 duoshuo_shortname:  i2brother
@@ -27,7 +27,7 @@ owner:
   avatar:         moe.png
   email:          ibrother.linux@gmail.com
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
-  description:    大叔一枚
+  description:    animal
   # Social networking links used in footer. Update and remove as you like.
   twitter:        IbrotherLinux
   facebook:       ibrother.me
@@ -62,9 +62,7 @@ links:
     url: /tags
   - title: Guestbook
     url: /guestbook
-  - title: Project
-    url: /project
-  - title: About me
+  - title: About
     url: /about
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
