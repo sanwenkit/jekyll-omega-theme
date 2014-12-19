@@ -1,68 +1,68 @@
-# HMFAYSAL OMEGA THEME
+# JEKYLL OMEGA THEME
 
-Project name:	HMFAYSAL OMEGA THEME  
-Author:	Hossain Mohd Faysal  
-Project type:	The Coolest Theme for Jekyll 
-License:	MIT License 
-  
-HMFAYSAL OMEGA is a minimalist, beautiful, responsive theme for Jekyll designed for engineers as well as writers who want their content to take front and center. This theme elegantly wraps each page and post with featured images complementing the content. It was built -- by Engineer slash Mathematician [Hossain Mohd Faysal](http://alum.mit.edu/www/hmfaysal/).
+项目名:	JEKYLL OMEGA THEME
+原始作者:	Hossain Mohd Faysal
+项目类型:	Jekyll最酷的主题
+许可证:	MIT License
 
-The theme features:
+HMFAYSAL OMEGA 是一个最小化，很漂亮并且有着响应式设计的Jekyll主题，它为那些喜欢文章内容放在网页最上方和中间的工程师和文字工作者而设计。这个主题可以给每个页面和文章添加一个漂亮的背景图片。 它由工程师 slash Mathematician 创建[Hossain Mohd Faysal](http://alum.mit.edu/www/hmfaysal/).
+
+主题特性:
 
 * Twitter Bootstrap 3
-* Option to set featured image that wraps your post in header and footer
-* Custom Javascript to emphasize the first paragraph `p:first-child` of your post
-* Variable templates for articles, quotation, video, photo and status updates (post types)
-* Display Equations via Native MathJax Support
-* Plugin-free/Github Pages Deployment Ready
-* Read time Calculator: Calculation of post read-time based on word count (Via Liquid Tags instead of a plugin)
-* Complex pagination script if you decide to turn pagination on
-* CSS3 transitions for better performance 
-* Ability to turn of animations in _config.yml
-* Readable typography to make your words shine
-* Disqus comments if you choose to enable
-* Simple and clear permalink structure
-* Footer Menu
-* SVG graphics
+* 可选择设置背景图片
+* 自定义Js代码去强调你文章中的第一段 `p:first-child`
+* 通过设置`post types`有多种模板，比如video,photo,status update
+* 通过原生MathJax支持来显示公式
+* 主题使用插件，因此可以直接push主题到github pages来使用
+* 阅读时间计算器: 基于文章字数去计算大概的阅读时间 (通过Liquid Tags来实现而不是使用插件)
+* 支持手动开关分页器
+* 使用CSS3过渡的效果获得更好的性能
+* 可以在_config.yml里设置动画
+* 可读的typography排版让你的文字亮瞎眼
+* 你可以选择打开Disqus评论或者多说评论
+* 简单明了的永久链接
+* 页脚菜单
+* SVG图形
 * Google Fonts
-* 361 Fontawesome icons
-* Tags for [Open Graph](https://developers.facebook.com/docs/opengraph/) and [Twitter Cards](https://dev.twitter.com/docs/cards) for a better social sharing experience
-* Beautifully crafted [404 page](http://hmfaysal.github.io/hmfaysal-omega-theme/404.html)
-* Custom [categories](http://hmfaysal.github.io/hmfaysal-omega-theme/categories/) and [tags](http://hmfaysal.github.io/hmfaysal-omega-theme/tags/) pages for viewers pleasure
-* Stylesheets for Pygments and Coderay to make your code examples look snazzy
-* Simple search that overlays results based on post title
-* Sitemap for search engines
-* Designed by an Electrical Engineer
+* 361个Fontawesome图标字体
+* 支持 [Open Graph](https://developers.facebook.com/docs/opengraph/) 和 [Twitter Cards](https://dev.twitter.com/docs/cards) 带给你更好的社交分享体验
+* 漂亮的 [404 页面](http://hmfaysal.github.io/hmfaysal-omega-theme/404.html)
+* 自定义 [categories](http://hmfaysal.github.io/hmfaysal-omega-theme/categories/) 和 [tags](http://hmfaysal.github.io/hmfaysal-omega-theme/tags/) 页面
+* 使用Solarized-light代码高亮样式
+* 基于文章标题的Simple search
+* 给搜索引擎使用的Sitemap
+* 由一位电子工程师设计
 
-For a full list of features, visit [this link](http://hmfaysal.github.io/hmfaysal-omega-theme/theme-setup/about-hmfaysal-omega/)
+想看到所有列出的特性, 访问 [这个链接](http://hmfaysal.github.io/hmfaysal-omega-theme/theme-setup/about-hmfaysal-omega/)
 
 ![screenshot of HMFAYSAL OMEGA Theme](https://raw.github.com/hmfaysal/hmfaysal-omega-theme/gh-pages/images/hmfaysal-omega-preview.jpg)
 
-## Basic Setup for new Jekyll site
+## 新Jekyll站点的基本设置
 
-1. [Install Jekyll](http://jekyllrb.com) and read through [this installation instructions](http://hmfaysal.github.io/hmfaysal-omega-theme/theme-setup/installing-jekyll-on-windows/) if you haven't already.
-2. Fork the [HMFAYSAL OMEGA Theme](https://github.com/hmfaysal/hmfaysal-omega-theme/fork)
-3. Clone the repo you just forked.
-4. Edit `_config.yml` to personalize your site.
-5. Check out the sample posts in `_posts` to see examples for pulling in large feature images, assigning categories and tags, and other YAML data.
-6. Read the documentation below for further customization pointers and documentation.
+1. [安装 Jekyll](http://jekyllrb.com) ，如果有问题，看这篇 [安装指导](https://coderq.com/t/jekyll-di-pian-an-zhuang-jekyll/105).
+2. Fork [JEKYLL OMEGA Theme](https://github.com/ibrother/jekyll-omega-theme/fork)这个项目
+3. Clone你刚才fork的项目.
+4. 编辑 `_config.yml` 来自定义你的站点。
+5. 查看`_posts`目录下面的示例文章。
+6. 探索更多的自定义功能可以继续阅读文档。
 
 
-**Pro-tip:** Delete the `gh-pages` branch after cloning and start fresh by branching off `master`. There is a bunch of garbage in `gh-pages` used for the theme's demo site that I'm guessing you don't want on your site.
 
 ---
 
-## Setup for Existing Jekyll site
+## 从已有的Jekyll站点安装
 
-1. Clone the following folders: `_includes`, `_layouts`, `plugins`, `assets`, and `images`.
-2. Clone the following files and personalize content as need: `about.md`, `technical-details.md`, `theme-setup.md`, `index.html`, `categories.html`, `tags.html`, `feed.xml`, and `sitemap.xml`.
-3. Set the following variables in your `_config.yml` file:
+1. Clone下面的目录: `_includes`, `_layouts`, `plugins`, `assets`, and `images`.
+2. Clone 下面列出的文件: `about.md`, `index.html`, `categories.html`, `tags.html`, `feed.xml`, 和 `sitemap.xml`.
+3. 在你自己的 `_config.yml` 文件里设置下面的变量:
 
 ``` yaml
 title:            Site Title
 description:      Site description for the metas.
 logo:             site-logo.png
 disqus_shortname: shortname
+duoshuo_shortname: 
 # Assign a default image for your site's header and footer
 default_bg:       some-image.jpg
 search:           true
@@ -102,6 +102,9 @@ google_verify:
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:
 
+# nprogress
+nprogress:  true
+
 # Links to include in top navigation
 # For external links add external: true
 links:
@@ -109,20 +112,21 @@ links:
     url: /
     external: false
     icon: home
-  - title: <i class="icon-book"></i> Documentation
-    url: /documentation
   - title: Categories
     url: /categories
   - title: Tags
     url: /tags
-  - title: Faysal who?
-    url: /hossain-mohd-faysal
+  - title: Guestbook
+    url: /guestbook
+  - title: About
+    url: /about
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
+timezone:    Asia/Shanghai
 future:      true
-pygments:    true
+highlighter: pygments
 markdown:    kramdown
+excerpt_separator: "<!--more-->"
 paginate:    6
 paginate_path: "page:num"
 
@@ -146,11 +150,11 @@ kramdown:
 
 ---
 
-## Post Front Matter YAML
+## 文章头信息 YAML
 
-HMFAYSAL OMEGA uses variable post templates for articles, quotation, video, photo and status updates. 
+HMFAYSAL OMEGA主题可以设置变量来使用相应的模板，包括 articles, quotation, video, photo和status updates.
 
-A new blog post should have the following structure to utilise the themes functions
+一篇新文章开头要有下面的结构才能用到本主题的功能
 
 ``` yaml
 ---
@@ -168,7 +172,7 @@ mathjax:
 ---
 ```
 
-A new status should have the following structure to utilise the themes functions
+A 一篇新"状态"的开头要有下面的结构
 
 ``` yaml
 ---
@@ -187,7 +191,7 @@ mathjax:
 ---
 ```
 
-A new quotation post should have the following structure to utilise the themes functions
+一篇引用类型的文章用下面的结构
 
 ``` yaml
 ---
@@ -206,7 +210,7 @@ mathjax:
 ---
 ```
 
-A new video post should have the following structure to utilise the themes functions
+视频类型的文章头信息结构
 
 ``` yaml
 ---
@@ -225,7 +229,7 @@ mathjax:
 ---
 ```
 
-A new photo post should have the following structure to utilise the themes functions. By default, the featured image is shown on the blog index, but if you want to display another photo, you can choose to do so :)
+图片类型文章的头信息结构
 
 ``` yaml
 ---
@@ -247,7 +251,7 @@ mathjax:
 
 ---
 
-## Folder Structure
+## 目录结构
 ``` bash
 HMFAYSAL-OMEGA-THEME
 │
@@ -312,24 +316,25 @@ HMFAYSAL-OMEGA-THEME
 
 ---
 
-## Questions?
+## 有问题?
 
-Having a problem getting something to work or want to know why I setup something in a certain way? Ping me on Twitter [@hmfaysal](http://twitter.com/hmfaysal) or [file a GitHub Issue](https://github.com/hmfaysal/hmfaysal-omega-theme/issues/new).
-
----
-
-## Requests?
-
-If you have some specific requests for this theme, or if you need help custom coding some elements, message me on Twitter [@hmfaysal](http://twitter.com/hmfaysal) or email me at [hmfaysal@alum.mit.edu](mailto:hmfaysal@alum.mit.edu)
+使用主题遇到问题或者想知道设置一些东西，可以联系原作者[@hmfaysal](http://twitter.com/hmfaysal)，或者使用[Issue](https://github.com/ibrother/jekyll-omega-theme/issues/new)
+也可联系[本animal](ibrother.linux@gmail.com)
 
 ---
 
-## License
+## 有需求?
+
+如果你对本主题有特殊的需求，或者需要自定义一些元素。可以给作者Twitter发信息 [@hmfaysal](http://twitter.com/hmfaysal) 或者发邮件 <hmfaysal@alum.mit.edu>
+
+---
+
+## 许可证
 
 This theme is free and open source software, distributed under the [The MIT License](LICENSE). So feel free to use this Jekyll theme on your site without linking back to me or using a disclaimer.
 
 If you'd like to give me credit somewhere on your blog or tweet a shout out to [@hmfaysal](https://twitter.com/hmfaysal), that would be pretty sweet.
 
 
-Warm Regards and Stay Creative,  
+Warm Regards and Stay Creative,
 Hossain Mohd. Faysal
