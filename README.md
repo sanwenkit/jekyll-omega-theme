@@ -41,6 +41,15 @@ HMFAYSAL OMEGA 是一个最小化，很漂亮并且有着响应式设计的Jekyl
 
 ![screenshot of HMFAYSAL OMEGA Theme](https://raw.github.com/hmfaysal/hmfaysal-omega-theme/gh-pages/images/hmfaysal-omega-preview.jpg)
 
+## 最快部署
+
+如果你不需要本地预览，完全不需要安装一堆的软件，只需要这样做：
+
+1. github帐号和git
+2. 一个支持markdown的编辑器
+3. fork这个项目
+4. clone之后本地提交修改
+
 ## 新Jekyll站点的基本设置
 
 1. [安装 Jekyll](http://jekyllrb.com) ，如果有问题，看这篇 [安装指导](https://coderq.com/t/jekyll-di-pian-an-zhuang-jekyll/105).
