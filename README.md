@@ -1,8 +1,11 @@
 # JEKYLL OMEGA THEME
 
 项目名:	JEKYLL OMEGA THEME
+
 原始作者:	Hossain Mohd Faysal
+
 项目类型:	Jekyll最酷的主题
+
 许可证:	MIT License
 
 HMFAYSAL OMEGA 是一个最小化，很漂亮并且有着响应式设计的Jekyll主题，它为那些喜欢文章内容放在网页最上方和中间的工程师和文字工作者而设计。这个主题可以给每个页面和文章添加一个漂亮的背景图片。 它由工程师 slash Mathematician 创建[Hossain Mohd Faysal](http://alum.mit.edu/www/hmfaysal/).
