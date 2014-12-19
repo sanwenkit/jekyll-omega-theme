@@ -331,7 +331,7 @@ HMFAYSAL-OMEGA-THEME
 ## 有问题?
 
 使用主题遇到问题或者想知道设置一些东西，可以联系原作者[@hmfaysal](http://twitter.com/hmfaysal)，或者使用[Issue](https://github.com/ibrother/jekyll-omega-theme/issues/new)
-也可联系[本animal](ibrother.linux@gmail.com)
+也可联系我 <ibrother.linux@gmail.com>
 
 ---
 
