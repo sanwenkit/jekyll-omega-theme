@@ -273,13 +273,6 @@ HMFAYSAL-OMEGA-THEME
 │   │       bootstrap.css
 │   │       style.css
 │   │
-│   ├───font
-│   │       fontawesome─webfont.svg
-│   │       fontawesome─webfontd41d.eot
-│   │       fontawesome─webfontf77b.eot
-│   │       fontawesome─webfontf77b.ttf
-│   │       fontawesome─webfontf77b.woff
-│   │
 │   ├───fonts
 │   │   ├───glyphicons─halflings─regular.eot
 │   │   │       index.html
