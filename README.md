@@ -28,7 +28,7 @@ HMFAYSAL OMEGA 是一个最小化，很漂亮并且有着响应式设计的Jekyl
 * 页脚菜单
 * SVG图形
 * Google Fonts
-* 361个Fontawesome图标字体
+* 479个Fontawesome图标字体
 * 支持 [Open Graph](https://developers.facebook.com/docs/opengraph/) 和 [Twitter Cards](https://dev.twitter.com/docs/cards) 带给你更好的社交分享体验
 * 漂亮的 [404 页面](http://hmfaysal.github.io/hmfaysal-omega-theme/404.html)
 * 自定义 [categories](http://hmfaysal.github.io/hmfaysal-omega-theme/categories/) 和 [tags](http://hmfaysal.github.io/hmfaysal-omega-theme/tags/) 页面
