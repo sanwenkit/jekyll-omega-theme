@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /about/index.html
-title: About me
+title: 关于我
 tags: [about]
 image:
   feature: 
