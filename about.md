@@ -11,8 +11,6 @@ image:
   <figcaption>ibrother</figcaption>
 </figure>
 
->性別男
->
->愛好女
->
->大叔一枚
+<div class="alert alert-success" role="alert">
+    在这里加入你的介绍
+</div>
