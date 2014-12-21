@@ -2,7 +2,7 @@
 layout: post
 title: 代码高亮测试
 description: "一篇用于测试博客模板代码高亮的演示"
-category: 示例文章
+category: sample-post
 tags: [示例文章, 代码, 高亮]
 imagefeature: 
 comments: true
