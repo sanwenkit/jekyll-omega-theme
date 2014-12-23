@@ -825,14 +825,14 @@ html {
 /* THEME FONTS */
 /* ----------- */
 body {
-  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", "WenQuanYi Micro Hei", 'Merriweather', serif;
+  font-family: "Hiragino Sans GB", "Hiragino Sans GB W3", Helvetica, Tahoma, Arial, STXihei, "华文细黑", "WenQuanYi Micro Hei", "文泉驿微米黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
   font-size: 18px;
 }
 body input,
 body textarea,
 body .btn,
 body button {
-  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", "WenQuanYi Micro Hei", 'Merriweather', serif;
+  font-family: "Hiragino Sans GB", "Hiragino Sans GB W3", Helvetica, Tahoma, Arial, STXihei, "华文细黑", "WenQuanYi Micro Hei", "文泉驿微米黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
 }
 .lighter {
   font-weight: 200 !important;
@@ -849,7 +849,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', "Hiragino Sans GB", "Hiragino Sans GB W3", Helvetica, Tahoma     , Arial, STXihei, "华文细黑", "WenQuanYi Micro Hei", "文泉驿微米黑", "Micro     soft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
 }
 h1.lighter,
 h2.lighter,
@@ -861,7 +861,7 @@ h6.lighter {
 }
 
 .post-title {
-    font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  font-family: "Hiragino Sans GB", "Hiragino Sans GB W3", Helvetica, Tahoma, Arial, STXihei, "华文细黑", "WenQuanYi Micro Hei", "文泉驿微米黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
 }
 /* ---------- */
 /* ANIMATIONS */
@@ -1844,7 +1844,7 @@ img.mfp-img {
 }
 
 tt,code,kbd,samp,pre {
-    font-family: 'source-code-pro',monospace;
+    font-family: Monaco, "DejaVu Sans Mono", "WenQuanYi Micro Hei Mono", "文泉驿等宽微米黑", "Droid Sans Mono",'source-code-pro',monospace;
 }
 
 p code,li code {
@@ -1949,7 +1949,7 @@ pre {
 .highlight .il { color: #00C226; /*text-decoration: underline*/} /* Literal.Number.Integer.Long */
 .CodeRay {
     margin-bottom: 1.5em;
-    font-family: 'source-code-pro',monospace;
+    font-family: Monaco, "DejaVu Sans Mono", "WenQuanYi Micro Hei Mono", "文泉驿等宽微米黑", "Droid Sans Mono",'source-code-pro',monospace;
     font-size: 12px;
     font-size: .75rem;
     line-height: 2;
