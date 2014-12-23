@@ -1844,7 +1844,7 @@ img.mfp-img {
 }
 
 tt,code,kbd,samp,pre {
-    font-family: Monaco, "DejaVu Sans Mono", "WenQuanYi Micro Hei Mono", "文泉驿等宽微米黑", "Droid Sans Mono",'source-code-pro',monospace;
+    font-family: "DejaVu Sans Mono", "Droid Sans Mono", "WenQuanYi Micro Hei Mono", "文泉驿等宽微米黑", Monaco,'source-code-pro',monospace;
 }
 
 p code,li code {
@@ -1949,7 +1949,7 @@ pre {
 .highlight .il { color: #00C226; /*text-decoration: underline*/} /* Literal.Number.Integer.Long */
 .CodeRay {
     margin-bottom: 1.5em;
-    font-family: Monaco, "DejaVu Sans Mono", "WenQuanYi Micro Hei Mono", "文泉驿等宽微米黑", "Droid Sans Mono",'source-code-pro',monospace;
+    font-family: "DejaVu Sans Mono", "Droid Sans Mono", "WenQuanYi Micro Hei Mono", "文泉驿等宽微米黑", Monaco,'source-code-pro',monospace;
     font-size: 12px;
     font-size: .75rem;
     line-height: 2;
