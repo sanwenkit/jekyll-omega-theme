@@ -4,7 +4,6 @@
 <script type="text/javascript" src="{{ site.url }}/assets/js/waypoints.min.js"></script>
 <script type="text/javascript" src="{{ site.url }}/assets/js/script.js"></script>
 <script type="text/javascript" src="http://cdn.bootcss.com/highlight.js/8.3/highlight.min.js"></script>
-<script type="text/javascript" src="http://cdn.bootcss.com/nprogress/0.1.6/nprogress.min.js"></script>
 <script >hljs.initHighlightingOnLoad();</script>
 <script type='text/javascript'>console.log("HMFaysal Omega Theme Version 2.0");</script>
 <script type='text/javascript'>console.log("https://alum.mit.edu/www/hmfaysal");</script>
@@ -90,12 +89,4 @@ $("a#click-pages").click(function(){
 </script>
 {% endif %}
 {% if page.comments %}{% include duoshuo_comments.html %}{% endif %}
-{% if site.nprogress %}
-<script>
-NProgress.start();
-    setTimeout(function () {
-        NProgress.done();
-
-    }, 500);
-</script>
-{% endif %}
+<script>NProgress.done();</script>
