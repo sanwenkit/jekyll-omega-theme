@@ -323,8 +323,8 @@ HMFAYSAL-OMEGA-THEME
 
 ## 有问题?
 
-使用主题遇到问题或者想知道设置一些东西，可以联系原作者[@hmfaysal](http://twitter.com/hmfaysal)，或者使用[Issue](https://github.com/ibrother/jekyll-omega-theme/issues/new)
-也可联系我 <ibrother.linux@gmail.com>
+使用主题遇到问题或者想知道设置一些东西，如果你是汉子，可以联系原作者[@hmfaysal](http://twitter.com/hmfaysal)，或者使用[Issue](https://github.com/ibrother/jekyll-omega-theme/issues/new)
+如果你是萌妹子，我只想说：请联系我 <ibrother.linux@gmail.com>
 
 ---
 

@@ -13,6 +13,7 @@ mathjax:
 ---
 
 - [coney](http://gengbiao.me)
+- [Dpast](http://dpast.org)
 - [Intelligence Explosion](http://sing1ee.github.io)
 - [Jark](http://wuchong.me)
 - [Jeremy](http://www.j-cn.me)
