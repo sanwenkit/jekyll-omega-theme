@@ -88,5 +88,6 @@ $("a#click-pages").click(function(){
   })();
 </script>
 {% endif %}
-{% if page.comments %}{% include duoshuo_comments.html %}{% endif %}
+{% if page.comments and site.disqus_shortname %}{% include disqus_comments.html %}{% endif %}
+{% if page.comments and site.duoshuo_shortname %}{% include duoshuo_comments.html %}{% endif %}
 <script>NProgress.done();</script>
