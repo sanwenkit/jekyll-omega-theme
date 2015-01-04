@@ -59,17 +59,6 @@ Description: Awesome dude, awesome life
                             <a href="{{ site.url }}{{ page.url }}">{{ site.url }}{{ page.url }}</a>
                         </span>
                     </div>
-                    <div class="relate">
-                        <h4><strong>最新文章</strong></h4>
-                        {% for post in site.related_posts limit:3 %}
-                        <ul>
-                            <li class="related-post">
-                            <time datetime="{{ post.date | date_to_xmlschema }}" class="post-time">{{ post.date | date: "%Y-%m-%d" }}:</time>
-                            <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
-                            </li>
-                        </ul>
-                        {% endfor %}
-                    </div>
                     {% assign tagsize = page.tags.size %}
                     {% if tagsize != 0 %}
                     <div class="entry-tags text-center">
