@@ -69,7 +69,6 @@ Description: Awesome dude, awesome life
                     </div>
                     {% endif %}
                     </div>
-        </div>
                     <footer class="post-footer entry-meta">
                         {% if site.share %}{% include share.html %}{% endif %}
                         {% include signoff.html %} 
@@ -86,6 +85,7 @@ Description: Awesome dude, awesome life
                         {% if site.duoshuo_shortname and page.comments == true %}<div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="{{ site.url }}{{ page.url }}"></div><!-- /#duoshuo_thread -->{% endif %}
                     </footer>
             </article>
+        </div>
     </div>
 </div>
 {% include footer.html %}
