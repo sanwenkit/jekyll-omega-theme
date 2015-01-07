@@ -218,12 +218,12 @@ tags: [ibrother, blog, linux, gentoo, vim, kde, program]
 {% if paginator.previous_page == 1 %}
         <a class="newer-posts btn btn-danger btn-large" href="{{ site.url }}">&larr; Newer Posts</a>
 {% else %}
-		<a class="newer-posts btn btn-danger btn-large" href="{{ site.url }}/page{{ paginator.previous_page }}">&larr; Newer Posts</a>
+		<a class="newer-posts btn btn-danger btn-large" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">&larr; Newer Posts</a>
 {% endif %}
 {% endif %}
     <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
  {% if paginator.next_page %}   
-        <a class="older-posts btn btn-danger btn-large" href="{{ site.url }}/page{{ paginator.next_page }}">Older Posts &rarr;</a>
+        <a class="older-posts btn btn-danger btn-large" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older Posts &rarr;</a>
  {% endif %}
 </nav>
             </div>
