@@ -10,11 +10,11 @@
                 {% else %}
                     <a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a>
                 {% endif %} </li>
-{% endfor %}            
+{% endfor %}
            <li><a href="{{ site.url }}/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss"></i> Feed</a></li>
     </nav>
-    
-    
+
+
 </aside>
 {% if page.imagefeature %}<header id="masthead" class="blog-background overlay align-center align-middle animated from-bottom"  style="background-image: url({{ page.imagefeature }})" itemscope itemtype="http://schema.org/Organization">{% if page.imagecredit %}<span class="image-credit">Photo Credit: <a href="{{ page.imagecreditlink }}" target="_blank">{{ page.imagecredit }}</a></span>{% endif %}
 {% else %}
@@ -35,7 +35,7 @@
             <h1 class="blog-title light" itemprop="name">
                 {{ site.title }}
             </h1>
-                
+
             </a>
             <h2 class="blog-description light bordered bordered-top" itemprop="description">
                 {{ page.headline }}
@@ -52,7 +52,7 @@
             <h1 class="blog-title light" itemprop="name">
                 {{ site.title }}
             </h1>
-                
+
             </a>
         </div>
     </div>

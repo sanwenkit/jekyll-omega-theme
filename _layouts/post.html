@@ -2,12 +2,12 @@
 <html>
 <!--
 ====================================================
-    __  ____  ______________  _______ ___    __ 
-   / / / /  |/  / ____/   \ \/ / ___//   |  / / 
-  / /_/ / /|_/ / /_  / /| |\  /\__ \/ /| | / /  
+    __  ____  ______________  _______ ___    __
+   / / / /  |/  / ____/   \ \/ / ___//   |  / /
+  / /_/ / /|_/ / /_  / /| |\  /\__ \/ /| | / /
  / __  / /  / / __/ / ___ |/ /___/ / ___ |/ /___
 /_/ /_/_/  /_/_/   /_/  |_/_//____/_/  |_/_____/
-                                                     
+
 ====================================================
 Owner Name: Hossain Mohammad Faysal
 Profile: https://www.facebook.com/hmfaysal
@@ -18,7 +18,7 @@ Description: Awesome dude, awesome life
 <head>
 {% include head.html %}
 </head>
-<body class="post-template" itemscope itemtype="http://schema.org/WebPage">  
+<body class="post-template" itemscope itemtype="http://schema.org/WebPage">
 {% include header.html %}
 <div id="main" class="content" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Blog">
     <div class="container">
@@ -63,15 +63,15 @@ Description: Awesome dude, awesome life
                     {% assign tagsize = page.tags.size %}
                     {% if tagsize != 0 %}
                     <div class="entry-tags text-center">
-                    
+
                         <i class="fa fa-tags"></i>&nbsp;Tagged with {% for tag in page.tags %}<a href="{{ site.url }}/tags/index.html#{{ tag | cgi_encode }}" data-toggle="tooltip" title="Posts tagged with {{ tag }}" rel="tag">{{ tag }}</a>{% unless forloop.last %}&nbsp;&bull;&nbsp;{% endunless %}{% endfor %}
-                    
+
                     </div>
                     {% endif %}
                     </div>
                     <footer class="post-footer entry-meta">
                         {% if site.share %}{% include share.html %}{% endif %}
-                        {% include signoff.html %} 
+                        {% include signoff.html %}
                         <nav class="pagination" role="navigation">
                         {% if page.previous %}
                         <a class="newer-posts btn btn-danger btn-large" rel="prev" href="{{ page.previous.url | prepend: site.baseurl }}" title="{{ page.previous.title }}">&larr; Previous Post</a>
@@ -88,10 +88,10 @@ Description: Awesome dude, awesome life
         </div>
     </div>
 </div>
-{% include footer.html %}
+    {% include footer.html %}
 
-{% include scripts.html %}
+    {% include scripts.html %}
 
-{% include toc.html %}
+    {% include toc.html %}
 </body>
 </html>
