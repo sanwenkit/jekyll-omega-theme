@@ -7,10 +7,10 @@ image:
   feature: 
 ---
 <figure>
-  <img src="{{ site.url }}/images/moe.png" alt="ibrother">
+  <img src="{{ site.url }}/images/moe.png" alt="sanwenkit">
   <figcaption>ibrother</figcaption>
 </figure>
 
 <div class="alert alert-success" role="alert">
-    在这里加入你的介绍
+    半调子攻城师，开发狗
 </div>
