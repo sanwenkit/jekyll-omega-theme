@@ -20,10 +20,10 @@ fin_color:        "255,255,255"
 # Owner/author information
 owner:
   name:           sanwenkit
-  avatar:         moe.png
+  avatar:         http://7xwdx7.com1.z0.glb.clouddn.com/avatar.jpg
   email:          sanwenkit@gmail.com
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
-  description:    Im just a kid
+  description:    运乃强者之谦称，命乃弱者之借口
   # Social networking links used in footer. Update and remove as you like.
   twitter:        sanwenkit
   facebook:       
@@ -107,7 +107,7 @@ detach:  false
 port:    4000
 host:    127.0.0.1
 baseurl: "/" # the subpath of your site, e.g. /blog/
-url: "http://blog.sanwenkit.com/" # the base hostname & protocol for your site
+url: "http://blog.sanwenkit.com" # the base hostname & protocol for your site
 
 # Backwards-compatibility
 relative_permalinks: false

@@ -4,7 +4,7 @@ permalink: links/index.html
 title: "友情链接"
 description: 
 headline: 
-modified: 2014-12-21
+modified: 2016-07-15
 tags: []
 image: 
   feature: 
@@ -16,5 +16,5 @@ mathjax:
 
 
 <div class="alert alert-info" role="alert">
-    想要交换友链的小伙伴可以在下面留言:
+    想要交换友链的小伙伴联系我QQ:2495378207
 </div>
