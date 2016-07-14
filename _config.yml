@@ -33,7 +33,7 @@ owner:
   instagram:      
   flickr:         
   tumblr:         
-  weibo: 234684967
+  weibo: 1897952523
   # For Google Authorship https://plus.google.com/authorship
 google_plus:    
 
@@ -51,22 +51,22 @@ links:
     external: false
     icon: home
   - title: Categories
-    url: /categories
+    url: categories
     icon: bars
   - title: Tags
-    url: /tags
+    url: tags
     icon: tags
   - title: Guestbook
-    url: /guestbook
+    url: guestbook
     icon: comments
   - title: Project
-    url: /project
+    url: project
     icon: code
   - title: Links
-    url:   /links
+    url:   links
     icon: link
   - title: About
-    url: /about
+    url: about
     icon: user
 
 # Where things are
