@@ -7,7 +7,7 @@ image:
   feature: 
 ---
 <figure>
-  <img src="{{ site.url }}/images/moe.png" alt="sanwenkit">
+  <img src="http://7xwdx7.com1.z0.glb.clouddn.com/avatar.jpg" alt="sanwenkit">
   <figcaption>sanwenkit</figcaption>
 </figure>
 
