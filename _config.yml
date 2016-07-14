@@ -20,7 +20,7 @@ fin_color:        "255,255,255"
 # Owner/author information
 owner:
   name:           sanwenkit
-  avatar:         http://7xwdx7.com1.z0.glb.clouddn.com/avatar.jpg
+  avatar:         avatar.jpg
   email:          sanwenkit@gmail.com
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
   description:    运乃强者之谦称，命乃弱者之借口
