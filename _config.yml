@@ -1,8 +1,8 @@
-title:            ibrother
-description:      "Talk is cheap, show me the code"
+title:            sanwenkit
+description:      "I'm just a kid"
 logo:             omikron.png
 disqus_shortname:
-duoshuo_shortname:  i2brother
+duoshuo_shortname:  sanwenkit
 # Assign a default image for your site's header and footer
 default_bg:       http://i2brother.qiniudn.com/bg2.jpg
 search:           true
@@ -19,15 +19,15 @@ fin_color:        "255,255,255"
 
 # Owner/author information
 owner:
-  name:           ibrother
+  name:           sanwenkit
   avatar:         moe.png
-  email:          ibrother.linux@gmail.com
+  email:          sanwenkit@gmail.com
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
-  description:    大叔一枚
+  description:    Im just a kid
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        IbrotherLinux
-  facebook:       ibrother.me
-  github:         ibrother
+  twitter:        sanwenkit
+  facebook:       
+  github:         sanwenkit
   stackexchange:  
   linkedin:       
   instagram:      
@@ -38,7 +38,7 @@ owner:
 google_plus:    
 
 # Analytics and webmaster tools stuff goes here
-google_analytics:   UA-52116871-3
+google_analytics:   
 google_verify:      
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:         
@@ -106,8 +106,8 @@ excerpt_separator: "<!--more-->"
 detach:  false
 port:    4000
 host:    127.0.0.1
-baseurl: "/jekyll-omega-theme" # the subpath of your site, e.g. /blog/
-url: "http://blog.ibrother.me/jekyll-omega-theme" # the base hostname & protocol for your site
+baseurl: "/" # the subpath of your site, e.g. /blog/
+url: "http://blog.sanwenkit.com/" # the base hostname & protocol for your site
 
 # Backwards-compatibility
 relative_permalinks: false
