@@ -12,5 +12,5 @@ image:
 </figure>
 
 <div class="alert alert-success" role="alert">
-    半吊子攻城师，开发狗
+    半吊子攻城师、开发狗，关注领域包括安全测试、安全开发、数据分析等等。
 </div>
