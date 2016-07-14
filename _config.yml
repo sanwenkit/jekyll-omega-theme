@@ -51,22 +51,22 @@ links:
     external: false
     icon: home
   - title: 分类
-    url: categories
+    url: /categories
     icon: bars
   - title: 标签
-    url: tags
+    url: /tags
     icon: tags
   - title: 留言板
-    url: guestbook
+    url: /guestbook
     icon: comments
   - title: 项目
-    url: project
+    url: /project
     icon: code
   - title: 链接
-    url:   links
+    url:   /links
     icon: link
   - title: 关于
-    url: about
+    url: /about
     icon: user
 
 # Where things are
