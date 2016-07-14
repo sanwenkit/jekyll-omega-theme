@@ -1,9 +1,9 @@
 ---
 layout: post
 title: thorns异步任务队列的初步使用体会
-description: "记录学习使用猪猪侠@ringzero分享的thorns框架的过程"
+description: "记录thorns框架的学习过程"
 category: scanner
-tags: [scanner thorns celery]
+tags: [scanner, thorns, celery]
 imagefeature: http://7xwdx7.com1.z0.glb.clouddn.com/5551e1cabd3bb.jpg
 comments: true
 share: true
