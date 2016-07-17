@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Jenkins RCE 2(CVE-2016-0788) PoC 调试记录
-description: "Poc for Jenkins RCE 2(CVE-2016-0788)"
+title: Jenkins RCE 2 调试记录
+description: "又一个简单粗暴的命令执行"
 category: scanner
 tags: [scanner, java, Jenkins]
 imagefeature: http://7xwdx7.com1.z0.glb.clouddn.com/5551e1cabd3bb.jpg
