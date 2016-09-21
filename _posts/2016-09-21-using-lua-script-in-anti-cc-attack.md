@@ -17,17 +17,17 @@ share: true
 
 本地环境中，为了方便直接使用了openresty进行测试。首先需要在nginx配置文件http属性中增加lua支持：
 
-`lua_package_path "/usr/local/openresty/nginx/lua/?.lua;/usr/local/openresty/lualib/?.lua;;";
-lua_package_cpath "/usr/local/openresty/lualib/?.so;;";
-`
+`lua_package_path "/usr/local/openresty/nginx/lua/?.lua;/usr/local/openresty/lualib/?.lua;;";`
+
+`lua_package_cpath "/usr/local/openresty/lualib/?.so;;";`
 
 同时，配置access_by_lua_file字段、开启lua代码缓存
 
-`lua_code_cache on;
-access_by_lua_file "/usr/local/openresty/nginx/lua/access_limit.lua";
-`
+`lua_code_cache on;`
 
-最后，将进行访问频率控制的lua脚本放到制定路径：/usr/local/openresty/nginx/lua/access_limit.lua
+`access_by_lua_file "/usr/local/openresty/nginx/lua/access_limit.lua";`
+
+最后，将进行访问频率控制的lua脚本放到配置文件中规定的指定路径
 
 ~~~lua
 
