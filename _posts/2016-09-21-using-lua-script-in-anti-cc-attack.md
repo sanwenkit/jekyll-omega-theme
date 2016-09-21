@@ -49,8 +49,11 @@ end
 local redis = require "resty.redis"
 local red = redis:new()
 red:set_timeout(1000)
-local ip = "redis-ip"
-local port = redis-port
+local ip = "redis-ip" --redis服务器IP
+local port = redis-port --redis服务器端口
+local freqtime = 60 --频率统计周期
+local freqlimit = 20 --访问频率上限
+local blocktime = 600 --封禁时间
 local ok, err = red:connect(ip,port)
 if not ok then
     return close_redis(red)
