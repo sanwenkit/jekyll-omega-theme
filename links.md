@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: links/index.html
-title: "友情链接"
+title: "安全站点分享"
 description: 
 headline: 
 modified: 2016-07-15
@@ -12,9 +12,9 @@ comments: true
 mathjax: 
 ---
 
-- [wooyun](http://www.wooyun.org/whitehats/sanwenkit)
+- [Hack Inn](http://www.hackinn.com)
 
 
 <div class="alert alert-info" role="alert">
-    想要交换友链的小伙伴联系我QQ:2495378207
+    向无私分享的小伙伴们致谢
 </div>
