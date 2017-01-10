@@ -45,7 +45,7 @@ netsh interface portproxy delete v4tov4 listenaddress=192.168.1.1 listenport=233
 
 ssh -fCNR <port_b1>:localhost:22 usr_b@233.233.233.233
 
-{% endhgihlight %}
+{% endhighlight %}
 
 在公网机器B上创建本地端口转发：
 
