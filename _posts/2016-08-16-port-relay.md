@@ -13,11 +13,19 @@ share: true
 
 开启端口转发功能:
 
-`netsh interface ipv6 install`
+{% highlight c %}
+
+netsh interface ipv6 install
+
+{% endhighlight %}
 
 查看端口转发配置：
 
-`netsh interface portproxy show v4tov4`
+{% highlight c %}
+
+netsh interface portproxy show v4tov4
+
+{% endhighlight %}
 
 创建一条转发规则：
 

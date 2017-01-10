@@ -23,7 +23,7 @@ share: true
 
 [^2]: <https://github.com/jenkinsci/jenkins/blob/9fce1ee933eb5276baff977d562fc8e183f1c8d6/test/src/test/java/jenkins/security/Security232Test.java>
 
-{% highlight java linenos %}
+{% highlight java %}
 public class Jenkins {
 
     public static void main( final String[] args) throws Exception {
