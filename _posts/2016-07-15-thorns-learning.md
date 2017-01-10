@@ -19,13 +19,28 @@ thorns框架的初始化安装可以参见项目说明文档
 安装并配置完毕后，开启步骤如下：
 
 * 启动redis服务
-`redis-server /etc/redis/redis.conf`
+
+{% highlight c %}
+
+redis-server /etc/redis/redis.conf
+
+{% endhighlight %}
 
 * 利用supervisord开启程序
-`supervisord -c /etc/supervisord.conf`
+
+{% highlight c %}
+
+supervisord -c /etc/supervisord.conf
+
+{% endhighlight %}
 
 * 利用run.py压入扫描任务
-`python run.py 10.10.10.1-10.10.10.255`
+
+{% highlight c %}
+
+python run.py 10.10.10.1-10.10.10.255
+
+{% endhighlight %}
 
 通过对框架的初步学习使用，将框架的工作原理总结如下：
 
@@ -43,7 +58,7 @@ thorns框架的初始化安装可以参见项目说明文档
 
 具体内容如下：
 
-~~~python
+{% highlight python %}
 
 @app.task
 def nmap_dispath(targets, taskid=None):
@@ -57,13 +72,13 @@ def nmap_dispath(targets, taskid=None):
     process_output = nmap_proc.stdout.readlines()
     return process_output
 
-~~~
+{% endhighlight %}
 
 这里定义了一个celery的task，通过子进程的方式运行wyportmap.py脚本，向脚本传递对应的targets参数，并获得任务运行结果。
 
 celery通过将任务队列信息和结果在redis和mysql中进行维护，其全局配置代码如下：
 
-~~~python
+{% highlight python %}
 
 app.conf.update(
     CELERY_IMPORTS = ("tasks", ),
@@ -80,7 +95,7 @@ app.conf.update(
     # 设置一个传输选项来给消息加上前缀
 )
 
-~~~
+{% endhighlight %}
 
 这样，通过web管理界面及对应的API，我们就实现查看并控制所有队列中的任务状态:
 
@@ -94,7 +109,7 @@ app.conf.update(
 
 例如创建一个对端口未授权访问进行扫描的task，任务定义如下：
 
-~~~python
+{% highlight python %}
 
 @app.task
 def port_dispath(address, port, service, taskid = None):
@@ -110,11 +125,11 @@ def port_dispath(address, port, service, taskid = None):
         process_output = cmd_proc.stdout.readlines()
         return process_output
 
-~~~
+{% endhighlight %}
 
 同时，portScan.py中可以通过定义不同端口的扫描poc文件实现自定义的扫描规则：
 
-~~~python
+{% highlight python %}
 
 scan_rule = {
     "openssl" : {
@@ -179,6 +194,6 @@ scan_rule = {
     }
 }
 
-~~~
+{% endhighlight %}
 
 这样，通过HTTP API我们就可以压入各种自定义的扫描task，把我们手头的各种POC加入到thorns队列中进行自动化扫描啦。

@@ -13,7 +13,7 @@ share: true
 
 在调用扫描器进行批量扫描时，需要对扫描进程的生命周期进行控制。对于长时间运行没有返回的进程，需要定时进行清理避免消耗大量系统资源。
 
-~~~python
+{% highlight python %}
 
 import win32com.client
 import logging
@@ -54,8 +54,13 @@ for p in wmi.InstancesOf('win32_process'):
         cmd = 'TaskKill /T /F /PID %s' % p.Properties_('ProcessId')
         os.popen(cmd)
 
-~~~
+{% endhighlight %}
 
 配合AT命令等创建计划任务，我们就能做到定期执行脚本清理超时进程。
 
-`AT 00:00 /every:M,T,W,Th,F,S,Su "python C:\Users\admin\Desktop\tool\processKiller.py"`
+{% highlight shell %}
+
+AT 00:00 /every:M,T,W,Th,F,S,Su "python C:\Users\admin\Desktop\tool\processKiller.py"
+
+{% endhighlight %}
+

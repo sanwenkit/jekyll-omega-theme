@@ -21,11 +21,19 @@ share: true
 
 创建一条转发规则：
 
-`netsh interface portproxy add v4tov4 listenaddress=192.168.1.1 listenport=2333 connectaddress=192.168.1.100 connnectport=22`
+{% highlight shell %}
+
+netsh interface portproxy add v4tov4 listenaddress=192.168.1.1 listenport=2333 connectaddress=192.168.1.100 connnectport=22
+
+{% endhighlight %}
 
 删除一条转发规则：
 
-`netsh interface portproxy delete v4tov4 listenaddress=192.168.1.1 listenport=2333`
+{% highlight shell %}
+
+netsh interface portproxy delete v4tov4 listenaddress=192.168.1.1 listenport=2333
+
+{% endhighlight %}
 
 ### Linux平台
 
@@ -33,12 +41,25 @@ share: true
 
 对于内网服务器A创建到公网机器B的反向代理：
 
-`ssh -fCNR <port_b1>:localhost:22 usr_b@233.233.233.233`
+{% highlight shell %}
+
+ssh -fCNR <port_b1>:localhost:22 usr_b@233.233.233.233
+
+{% endhgihlight %}
 
 在公网机器B上创建本地端口转发：
 
-`ssh -fCNL "*:<port_b2>:localhost:<port_b1>' localhost`
+{% highlight shell %}
+
+ssh -fCNL "*:<port_b2>:localhost:<port_b1>' localhost
+
+{% endhighlight %}
 
 利用任意机器登录内网主机A的SSH端口：
 
-`ssh -p <portb2> usra@233.233.233.233`
+{% highlight shell %}
+
+ssh -p <portb2> usra@233.233.233.233
+
+{% endhighlight %}
+
