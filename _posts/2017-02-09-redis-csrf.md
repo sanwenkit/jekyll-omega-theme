@@ -20,7 +20,10 @@ share: true
 发现攻击方式为构造POST请求提交至Redis监听端口6379。在Redis对HTTP报文的处理过程中，每次出现%0d%0a换行，就认为是一条命令进行解析，同时在执行无意义的错误命令后，不会主动关闭tcp连接，而是继续执行下一条命令。因此HTTP报文的Header不会影响到POST正文的解析执行，从而形成了CSRF利用。
 
 但是根据作者项目中js脚本的payload，发现无法在实际环境中执行，究其根本原因，还在于空格字符的干扰。虽然作者提供的示例无法直接拿来使用，不过还是暗中给出了解决该问题的链接地址：
-`http://www.agarri.fr/kom/archives/2014/09/11/trying_to_hack_redis_via_http_requests/index.html`
+
+{% highlight %}
+http://www.agarri.fr/kom/archives/2014/09/11/trying_to_hack_redis_via_http_requests/index.html
+{% endhighlight %}
 
 这里不得不膜拜一下，人家早在2014年就开始玩HTTP报文攻击redis服务了。文章里提到了构造满足Redis Protocol格式的命令来避免空格的干扰，还提到了读取系统文件内容等利用方式。
 
