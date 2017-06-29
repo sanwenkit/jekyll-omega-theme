@@ -1,3 +1,14 @@
+---
+layout: post
+title: 蓝牙安全测试总结
+description: "进行蓝牙协议安全测试的一些记录"
+category: scanner
+tags: [scanner,bluetooth]
+imagefeature: http://7xwdx7.com1.z0.glb.clouddn.com/5551e1cabd3bb.jpg
+comments: true
+share: true
+---
+
 # 蓝牙安全测试总结
 
 ### 蓝牙攻击分类
@@ -29,7 +40,7 @@
 
 + _交互数据嗅探_
 
-      因为从理论上而言，任何人都可以截获周围几米内正在传输的蓝牙通讯数据，也就是说，只要使用特定的设备，怀有恶意的攻击者是可以进行拦截、伪造、破坏正常的蓝牙通讯，这种攻击方式也就是我们常常提到的Sniff嗅探攻击
+    -  因为从理论上而言，任何人都可以截获周围几米内正在传输的蓝牙通讯数据，也就是说，只要使用特定的设备，怀有恶意的攻击者是可以进行拦截、伪造、破坏正常的蓝牙通讯，这种攻击方式也就是我们常常提到的Sniff嗅探攻击
 
 ### 蓝牙攻击方式
 
@@ -48,7 +59,7 @@
   - obexftp
     >是用于访问移动设备存储器的工具程序
 
-    `# obexftp -b 00:0A:D9:15:0B:1C -B 10 -g telecom/pb.vcf`
+    `obexftp -b 00:0A:D9:15:0B:1C -B 10 -g telecom/pb.vcf`
 
 + _BlueBug攻击_
   >与BlueSnarf一样，一些存在问题的手机可能会被攻击者通过AT命令操纵，攻击者除了可以下载手机中的信息之外，还可以操纵手机进行拨号、短信发送和互联网访问等活动
@@ -71,11 +82,9 @@ Bluez
   - hcidump
     > 可以使用这个来嗅探蓝牙通信
   - l2ping
-
     `l2ping MAC地址`
     >测试与该设备的蓝牙模块之间是否数据可达
   - sdptool
-
     `sdptool browse MAC地址`
     >为了获取手机的控制权，需要连接目标设备的串行端口。所以需要通过蓝牙来搜索关于 串行端口的服务。这里需要使用到sdptool工具
 
@@ -104,26 +113,28 @@ Bluez
 
 运行hciconfig可以看到：
 
+~~~
     hci0:   Type: BR/EDR  Bus: USB
         BD Address: 28:B2:BD:4F:6A:63  ACL MTU: 8192:128  SCO MTU: 64:128
         UP RUNNING
         RX bytes:503 acl:0 sco:0 events:22 errors:0
         TX bytes:336 acl:0 sco:0 commands:22 errors:0
+~~~
+
 从上图可以看出，我们的蓝牙设备是hci0
 
 运行hcitool dev可以看到我们的蓝牙设备的硬件地址
 
 运行hcitool --help可以查看更多相关命令
 
-*. 激活自己的蓝牙
-
-    sudo hciconfig hci0 up
+* 激活自己的蓝牙
+    `sudo hciconfig hci0 up`
 要注意的是，激活前蓝牙必须是打开的，否则会出现错误：
 
-*. 扫描附近的设备
+* 扫描附近的设备
 
+~~~
     hcitool scan
-
 
     root@kali:~# hcitool scan
     Scanning ...
@@ -131,26 +142,27 @@ Bluez
     00:1C:D4:C9:xx:xx   n/a
     84:DB:AC:15:xx:xx   HUAWEI MT7
     可以看到，发现了我手机的蓝牙了~~
+~~~
 
-*. 连接设备
+* 连接设备
 
 运行rfcomm --help 可以查看用法
 
 首先需要绑定目的蓝牙设备：
 
-    sudo rfcomm bind /dev/rfcomm0 E0:A6:70:8C:xx:xx
+    `sudo rfcomm bind /dev/rfcomm0 E0:A6:70:8C:xx:xx`
 注意：上面的这个地址是目的蓝牙设备的硬件地址
 
 接着我们连接它：
 
-    sudo cat >/dev/rfcomm0
+    `sudo cat >/dev/rfcomm0`
 这是目的蓝牙主机就会弹出一个对话框要求输入pin码，然后主机就会弹出一个对话框，只要输入的和刚才一致就可以通过验证。之后我们发现我的手机已经显示了成功配对的标记了。
 
-*. 断开连接
+* 断开连接
 
 删除绑定（否则在下次使用时会提示设备正忙），命令如下：
 
-    sudo rfcomm release /dev/rfcomm0
+    `sudo rfcomm release /dev/rfcomm0`
 
 
 ### 查看蓝牙设备是否开放串口
@@ -182,4 +194,4 @@ Bluez
 
 >早期的攻击方式： 向目标主机发送大量畸形的ICMP数据包的方式，使得目标计算机忙于响 应从而达到资源耗尽死机的目的
 
-    l2ping -f MAC addr.s
+  `l2ping -f MAC addr.s`
