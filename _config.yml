@@ -71,7 +71,7 @@ links:
 # Where things are
 source:      .
 destination: ./_site
-plugins:     ./_plugins
+plugins:     ["./_plugins"]
 layouts:     ./_layouts
 data_source: ./_data
 collections: null
@@ -97,7 +97,7 @@ gems:      []
 
 # Conversion
 markdown:    kramdown
-highlighter: pygments
+highlighter: rouge
 lsi:         false
 excerpt_separator: "<!--more-->"
 
