@@ -251,5 +251,6 @@ spring-mvc配置文件改写为如下：
 按照以上方法改写项目后，编译并部署在tomcat中。
 访问接口描述文档的json文件地址如下：
 >http://HOST:PORT/PROJECT/v2/api-docs
+
 访问swagger页面地址如下：
 >http://HOST:PORT/PROJECT/v2/swagger-ui.html
