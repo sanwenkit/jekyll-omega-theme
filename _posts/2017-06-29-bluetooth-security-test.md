@@ -60,9 +60,7 @@ share: true
     >是用于访问移动设备存储器的工具程序
 
     {% highlight shell %}
-
     obexftp -b 00:0A:D9:15:0B:1C -B 10 -g telecom/pb.vcf
-
     {% endhighlight %}
 
 + _BlueBug攻击_
@@ -79,13 +77,7 @@ Bluez
 
   - hciconfig
     >使用它来启动蓝牙接口（hci0），查询设备的规格。
-      >>激活设备：
-
-      {% highlight shell %}
-
-      hciconfig hci0 up
-
-      {% endhighlight %}
+      >>激活设备：hciconfig hci0 up
 
   - hcitool
     >查询工具。 可以用来查询设备名称，设备ID，设备类别和设备时钟。
@@ -93,23 +85,13 @@ Bluez
   - hcidump
     > 可以使用这个来嗅探蓝牙通信
   - l2ping
-
-    {% highlight shell %}
-
-    l2ping MAC地址
-
-    {% endhighlight %}
+    > l2ping命令使用
+      >>l2ping MAC地址
 
     >测试与该设备的蓝牙模块之间是否数据可达
   - sdptool
-
-    {% highlight shell %}
-
-    sdptool browse MAC地址
-
-    {% endhighlight %}
-
     >为了获取手机的控制权，需要连接目标设备的串行端口。所以需要通过蓝牙来搜索关于 串行端口的服务。这里需要使用到sdptool工具
+        >>sdptool browse MAC地址
 
 ### SDP工具使用
 
@@ -143,7 +125,6 @@ Bluez
         UP RUNNING
         RX bytes:503 acl:0 sco:0 events:22 errors:0
         TX bytes:336 acl:0 sco:0 commands:22 errors:0
-
     {% endhighlight %}
 
 从上图可以看出，我们的蓝牙设备是hci0
