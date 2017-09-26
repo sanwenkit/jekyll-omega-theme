@@ -14,7 +14,9 @@ share: true
 
 ### pom文件依赖配置
 在pom文件中添加如下依赖：
-```
+
+{% highlight xml %}
+
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
@@ -93,12 +95,15 @@ share: true
             <artifactId>guava</artifactId>
             <version>19.0</version>
         </dependency>
-```
+
+{% endhighlight %}
 
 ### 创建ApplicationSwaggerConfig配置类
 
 创建一个ApplicationSwaggerConfig配置类，源码如下：
-```
+
+{% highlight java %}
+
 package apidoc;
 
 import org.springframework.context.annotation.Bean;
@@ -126,11 +131,15 @@ public class ApplicationSwaggerConfig {
         return docket;
     }
 }
-```
+
+{% endhighlight %}
+
 
 ### 改写web.xml配置文件
 web.xml配置文件添加如下配置：
-```
+
+{% highlight xml %}
+
   <servlet-mapping>
     <servlet-name>default</servlet-name>
     <url-pattern>*.js</url-pattern>
@@ -159,11 +168,14 @@ web.xml配置文件添加如下配置：
     <servlet-name>default</servlet-name>
     <url-pattern>*.wof</url-pattern>
   </servlet-mapping>
-```
+
+{% endhighlight %}
 
 ### 改写spring-mvc配置文件
 spring-mvc配置文件改写为如下：
-```
+
+{% highlight xml %}
+
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   ~ **************************************************************************************
@@ -232,12 +244,12 @@ spring-mvc配置文件改写为如下：
 
 </beans>
 
-```
+{% endhighlight %}
 
 ### 查看接口文件
 
 按照以上方法改写项目后，编译并部署在tomcat中。
 访问接口描述文档的json文件地址如下：
-`http://HOST:PORT/PROJECT/v2/api-docs`
+>http://HOST:PORT/PROJECT/v2/api-docs
 访问swagger页面地址如下：
-`http://HOST:PORT/PROJECT/v2/swagger-ui.html`
+>http://HOST:PORT/PROJECT/v2/swagger-ui.html
