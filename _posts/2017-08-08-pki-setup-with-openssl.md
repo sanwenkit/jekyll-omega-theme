@@ -211,3 +211,12 @@ ln -s secondca.crt `openssl x509 -hash -noout -in secondca.crt`.0
 openssl verify -CApath /etc/ssl/certs/ -untrusted <pathToIntermediateCert> <pathToYourCert>
 {% endhighlight %}
 验证结果应为：fota.crt: OK
+
+### CRL列表生成
+
+CRL列表负责记录证书的吊销，可以由RootCA签发，也可以由不同的二级CA进行签发。相关签发命令如下：
+{% highlight shell %}
+
+openssl ca -config ca.conf -gencrl -cert second-device-ca.crt -keyfile second-device-ca.key -crldays 365 -out crl.pem
+
+{% endhighlight %}
