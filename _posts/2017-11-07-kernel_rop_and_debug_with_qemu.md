@@ -274,3 +274,6 @@ fake_stack = (unsigned long *)(stack_addr + 0x11e8 + 8);
 *fake_stack ++= user_ss;                /* saved SS */
 
 {% endhighlight %}
+
+最后，看一下利用qemu运行kernel rop代码的效果：
+![kernel-rop](http://7xwdx7.com1.z0.glb.clouddn.com/qemu-kernel-rop.png)
