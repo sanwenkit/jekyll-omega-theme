@@ -124,7 +124,7 @@ indexed寻址模式使用postbyte来确定index寄存器（X或Y）,SP或PC作�
    LDX  2,SP+ = PULX
    LDAA 1,SP+ = PULA
 
-{% end highlight %}
+{% endhighlight %}
 
 缓存器偏移的indexed寻址模式: 在这个寻址模式下，有效地址是基础索引寄存器中的值加上缓存器中的值。基础索引寄存器(X, Y, SP, or PC)的值不会改变，缓存寄存器可以是8bit也可以是16bit。
 
@@ -134,7 +134,7 @@ indexed寻址模式使用postbyte来确定index寄存器（X或Y）,SP或PC作�
 
 JMP [D, PC]
 
-{% end highlight %}
+{% endhighlight %}
 
 * 使用多个寻址模式的指令
 

@@ -51,7 +51,7 @@ Access­Control­Allow­Origin *
 Access­Control­Expose­Headers 'location'
 Access­Control­Allow­Credentials
 
-{% end highlight %}
+{% endhighlight %}
 
 认证
 
@@ -95,7 +95,7 @@ Content-Type: application/x-www-form-urlencoded
 grant_type=refresh_token&refresh_token=tGzv3JOkF0XG5Qx2TlKWIA
 &client_id=s6BhdRkqt3&client_secret=7Fjfp0ZBr1KtDRbnfVdmIw
 
-{% end highlight %}
+{% endhighlight %}
 
 协议接入点
 
@@ -134,7 +134,7 @@ GET /authorize?response_type=code&client_id=s6BhdRkqt3&state=xyz
 &redirect_uri=https%3A%2F%2Fclient%2Eexample%2Ecom%2Fcb HTTP/1.1
 Host: server.example.com
 
-{% end highlight %}
+{% endhighlight %}
 
 认证返回的字段: code(必须，返回Authorization code，一般该授信码最长有效时间应该为10分钟), state(与请求中的state值保持一致，便于Client端防御CSRF攻击)
 
@@ -146,7 +146,7 @@ HTTP/1.1 302 Found
 Location: https://client.example.com/cb?code=SplxlOBeZQQYbYS6WxSbIA
 &state=xyz
 
-{% end highlight %}
+{% endhighlight %}
 
 失败返回示例:
 
@@ -155,7 +155,7 @@ Location: https://client.example.com/cb?code=SplxlOBeZQQYbYS6WxSbIA
 HTTP/1.1 302 Found
 Location: https://client.example.com/cb?error=access_denied&state=xyz
 
-{% end highlight %}
+{% endhighlight %}
 
 AccessToken请求的字段：grant_type(必须，在Authorization code模式下肯定为authorization_code),code(必须，包含从Authorization Server获取的Authorization code)，redirect_uri(必须，与之前的redirect_uri保持一致),client_id(必须，客户端唯一编号)
 
@@ -170,7 +170,7 @@ Content-Type: application/x-www-form-urlencoded
 grant_type=authorization_code&code=SplxlOBeZQQYbYS6WxSbIA
 &redirect_uri=https%3A%2F%2Fclient%2Eexample%2Ecom%2Fcb
 
-{% end highlight %}
+{% endhighlight %}
 
 Authorization Server的认证安全要求：
 1、对Client端的私钥进行验证
@@ -194,7 +194,7 @@ Pragma: no-cache
 "example_parameter":"example_value"
 }
 
-{% end highlight %}
+{% endhighlight %}
 
 其他三种模式的认证过程这里不再详细描述。
 
@@ -218,7 +218,7 @@ Authorization: Basic czZCaGRSa3F0MzpnWDFmQmF0M2JW
 Content-Type: application/x-www-form-urlencoded
 grant_type=refresh_token&refresh_token=tGzv3JOkF0XG5Qx2TlKWIA
 
-{% end highlight %}
+{% endhighlight %}
 
 Authorization Server的认证安全要求：
 1、对Client端的私钥进行验证
@@ -234,7 +234,7 @@ GET /resource/1 HTTP/1.1
 Host: example.com
 Authorization: Bearer mF_9.B5f-4.1JqM
 
-{% end highlight %}
+{% endhighlight %}
 
 http-MAC
 
@@ -246,7 +246,7 @@ Authorization: MAC id="h480djs93hd8",
 nonce="274312:dj83hs9s",
 mac="kDZvddkndxvhGRXZhvuDjEWhGeE="
 
-{% end highlight %}
+{% endhighlight %}
 
 * 之前OAuth2.0漏洞的一些启示
 
