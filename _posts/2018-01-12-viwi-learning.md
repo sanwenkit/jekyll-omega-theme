@@ -87,11 +87,15 @@ Client端一般通过client_id（ID编号）,client_secret（认证私钥）两�
 
 通常来说建议Client端通过POST请求在body中提交这些字段
 
+{% highlight shell %}
+
 POST /token HTTP/1.1
 Host: server.example.com
 Content-Type: application/x-www-form-urlencoded
 grant_type=refresh_token&refresh_token=tGzv3JOkF0XG5Qx2TlKWIA
 &client_id=s6BhdRkqt3&client_secret=7Fjfp0ZBr1KtDRbnfVdmIw
+
+{% end highlight %}
 
 协议接入点
 
@@ -124,7 +128,7 @@ Authorization code模式的流程图
 
 认证请求示例:
 
-{% highlight http %}
+{% highlight shell %}
 
 GET /authorize?response_type=code&client_id=s6BhdRkqt3&state=xyz
 &redirect_uri=https%3A%2F%2Fclient%2Eexample%2Ecom%2Fcb HTTP/1.1
@@ -136,7 +140,7 @@ Host: server.example.com
 
 认证返回示例:
 
-{%  highlight http %}
+{%  highlight shell %}
 
 HTTP/1.1 302 Found
 Location: https://client.example.com/cb?code=SplxlOBeZQQYbYS6WxSbIA
@@ -146,7 +150,7 @@ Location: https://client.example.com/cb?code=SplxlOBeZQQYbYS6WxSbIA
 
 失败返回示例:
 
-{% highlight http %}
+{% highlight shell %}
 
 HTTP/1.1 302 Found
 Location: https://client.example.com/cb?error=access_denied&state=xyz
@@ -157,7 +161,7 @@ AccessToken请求的字段：grant_type(必须，在Authorization code模式下�
 
 AccessToken请求示例：
 
-{% highlight http %}
+{% highlight shell %}
 
 POST /token HTTP/1.1
 Host: server.example.com
@@ -176,7 +180,7 @@ Authorization Server的认证安全要求：
 
 AccessToken响应示例:
 
-{% highlight http %}
+{% highlight shell %}
 
 HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
@@ -206,7 +210,7 @@ AccessToken的更新
 
 AccessToken更新请求示例:
 
-{% highlight http %}
+{% highlight shell %}
 
 POST /token HTTP/1.1
 Host: server.example.com
@@ -224,7 +228,7 @@ Authorization Server的认证安全要求：
 
 bearer token
 
-{% highlight http %}
+{% highlight shell %}
 
 GET /resource/1 HTTP/1.1
 Host: example.com
@@ -234,7 +238,7 @@ Authorization: Bearer mF_9.B5f-4.1JqM
 
 http-MAC
 
-{% highlight http %}
+{% highlight shell %}
 
 GET /resource/1 HTTP/1.1
 Host: example.com
