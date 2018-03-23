@@ -220,3 +220,23 @@ CRL列表负责记录证书的吊销，可以由RootCA签发，也可以由不�
 openssl ca -config ca.conf -gencrl -cert second-device-ca.crt -keyfile second-device-ca.key -crldays 365 -out crl.pem
 
 {% endhighlight %}
+
+### 解析P7b证书链并进行证书验证
+
+CA机构会将其证书链通过一个下载地址进行发布，一般打包为PKCS#7格式。用户可以使用openssl解析该证书链，并使用该证书链对证书进行验证。
+
+解析P7b文件
+{% highlight shell %}
+
+openssl pkcs7 -in p7b_file -inform DER -print_certs -out certs.pem 
+
+{% endhighlight %}
+
+利用证书链验证证书
+{% highlight shell %}
+
+openssl verify -CAfile certs.pem CERT_FILE
+
+{% endhighlight %}
+
+
