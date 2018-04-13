@@ -142,13 +142,7 @@ Globalplatform Core Internal API描述了提供TA使用的所有服务，libutee
 
 * User mode TA 当REE中的客户端程序通过特定UUID请求TA服务时，用户空间TA会被加载。它运行在OP-TEE core更低一级的特权级别，即在Trust world用户空间运行。它完全遵循Globalplatform Core Internal API。它又能够细分为三种子类型：
 
-    1、安全存储TA： 这些TA存储在安全存储中。所有安装TA的描述信息被放入一个数据库，并在Normal World REE文件系统中作为一个单独的加密文件存储。在TA被加载前，它首先需要被安装，安装过程可以在初始化部署时完成，也可以后期加载。测试程序xtest可以将一个安全存储TA进行安装
-    
-    {% highlight shell %}
-    
-    xtest --install-ta
-    
-    {% endhighlight %}
+    1、安全存储TA： 这些TA存储在安全存储中。所有安装TA的描述信息被放入一个数据库，并在Normal World REE文件系统中作为一个单独的加密文件存储。在TA被加载前，它首先需要被安装，安装过程可以在初始化部署时完成，也可以后期加载。测试程序xtest可以将一个安全存储TA进行安装:xtest --install-ta
 
     2、REE文件系统TA： 这些TA是明文的签名ELF文件，以TA的UUID命令，并以ta为文件名后缀。它们与OP-TEE core隔离，并通过OP-TEE core内的密钥进行签名。由于这些TA被签名了，因此可以保存在REE文件系统内，并由tee-supplicant 复杂将它们加载进入Trust World进行验证和加载。
 
