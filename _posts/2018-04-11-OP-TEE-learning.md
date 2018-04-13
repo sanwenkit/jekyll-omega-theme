@@ -78,27 +78,39 @@ RPC退出： 当OP-TEE需要Normal World部分服务时，会产生RPC退出。R
  系统调用： 系统调用在线程stack中运行。ARMv7/AArch32中，SP_SVC在线程stack中已经被设置，ARMv7/AArch64中，在处理异常中断时，原始的SP_EL0被存储在struct thread_svc_regs中，同时当前线程stack被写入SP_EL0作为当前堆栈。当系统调用退出时，从struct thread_svc_regs中还原SP_EL0，这允许tee_svc_sys_return_helper()直接返回到thread_unwind_user_mode()。
 
 
- ### 共享内存
+### 共享内存
 
  共享内存是一块同时被Normal World和Trust World共享的内存区域，它被用来在两种模式间传递数据。
 
  共享内存分配： 共享内存通过Linux驱动从一个池（struct shm_pool）中分配,这个内存池包括：
+
+{% highlight shell %}
 
     内存池的起始物理地址
     内存池大小
     内存是否被缓存
     已分配的内存块列表
 
+{% endhighlight %}
+
 备注：
+
+{% highlight shell %}
 
     共享内存池是物理连续的
     共享内存池区域并不安全，因为它同时被Normal World和Trust World使用
 
+{% endhighlight %}
+
 共享内存配置： OP-TEE中，linux内核驱动负责初始化共享内存池，相关信息由OP-TEE core提供。Linux内核驱动通过一个SMC调用OPTEE_SMC_GET_SHM_CONFIG来获取以下信息：
+
+{% highlight shell %}
 
     内存池的起始物理地址
     内存池大小
     内存是否被缓存
+
+{% endhighlight %}
 
 共享内存配置是平台相关的，内存映射，包括MEM_AREA_NSEC_SHM区域，通过调用一个平台相关的函数bootcfg_get_memory()来获取。
 
@@ -138,20 +150,22 @@ Globalplatform Core Internal API描述了提供TA使用的所有服务，libutee
 
 * TA文件格式：
 
-```
+{% highlight shell %}
+
 <Signed header>
 <ELF>
-```
 
-Where `<ELF>` is the content of a standard ELF file and `<Signed header>`
-consists of:
+{% endhighlight %}
+
+ELF为原始可执行文件内容，Signed Header包含字段如下：
+
 
 | Type | Name | Comment |
 |------|------|---------|
-| `uint32_t` | magic | Holds the magic number `0x4f545348` |
-| `uint32_t` | img_type | image type, values defined by enum shdr_img_type |
-| `uint32_t` | img_size | image size in bytes |
-| `uint32_t` | algo | algorithm, defined by public key algorithms `TEE_ALG_*` from TEE Internal API specification |
-| `uint16_t` | hash_size | size of the signed hash |
-| `uint16_t` | sig_size | size of the signature |
-| `uint8_t[hash_size]` | hash | Hash of the fields above and the `<ELF>` above |
+| uint32_t | magic | Holds the magic number 0x4f545348 |
+| uint32_t | img_type | image type, values defined by enum shdr_img_type |
+| uint32_t | img_size | image size in bytes |
+| uint32_t | algo | algorithm, defined by public key algorithms TEE_ALG_* from TEE Internal API specification |
+| uint16_t | hash_size | size of the signed hash |
+| uint16_t | sig_size | size of the signature |
+| uint8_t[hash_size] | hash | Hash of the fields above and the <ELF> above |
