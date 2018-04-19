@@ -243,7 +243,7 @@ openssl verify -CAfile certs.pem CERT_FILE
 
 {% highlight shell %}
 
-openssl smime -verify -in CSR_DPCA_MM_0C000358731071042038.data -inform DER -out extract.data -CAfile mmgz_ca_cert_banma.pem
+openssl smime -verify -in P7FILE -inform DER -out EXETRACT_DATA -CAfile cert.pem
 
 {% endhighlight %}
 
@@ -251,7 +251,7 @@ openssl smime -verify -in CSR_DPCA_MM_0C000358731071042038.data -inform DER -out
 
 {% highlight shell %}
 
-openssl smime -verify -in CSR_DPCA_MM_0C000358731071042038.data -inform DER -content extract.data -signer mmgz_ca_cert_banma.pem -CAfile mmgz_ca_cert_banma.pem
+openssl smime -verify -in P7FILE -inform DER -content EXETRACT_DATA -signer cert.pem -CAfile cert.pem
 
 {% endhighlight %}
 
