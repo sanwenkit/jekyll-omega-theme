@@ -239,4 +239,20 @@ openssl verify -CAfile certs.pem CERT_FILE
 
 {% endhighlight %}
 
+解析P7文件中的有效签名内容
+
+{% highlight shell %}
+
+openssl smime -verify -in CSR_DPCA_MM_0C000358731071042038.data -inform DER -out extract.data -CAfile mmgz_ca_cert_banma.pem
+
+{% endhighlight %}
+
+利用P7文件及解析后的content、签名证书进行签名验证
+
+{% highlight shell %}
+
+openssl smime -verify -in CSR_DPCA_MM_0C000358731071042038.data -inform DER -content extract.data -signer mmgz_ca_cert_banma.pem -CAfile mmgz_ca_cert_banma.pem
+
+{% endhighlight %}
+
 
