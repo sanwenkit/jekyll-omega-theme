@@ -51,6 +51,7 @@ AUTOSAR架构使用三层软件平台：
 
 在下图中，SecOS使用CSM（Crypto Service Manager - 软件加解密）或CAL（Crypto Abstraction Layer - 硬件加密）来提供加解密功能。SecOS模块使用MAC机制或数字签名机制来保证关键数据传输时对ECU身份和数据真实性的验证。
 此外，SecOS模块来与AUTOSAR通讯系统连接，SecOS模块在软件层，它直接与PDU（Protol Data Unit）路由器连接来处理PDU的安全信息。当PDU路由器接口到一个配置了SecOS的消息，它首先将该消息路由到SecOS模块。SecOS完成安全检查后再返回PDU路由器进行下一步处理。
+![Secure-PDUR-Arch](http://7xwdx7.com1.z0.glb.clouddn.com/SecOS-PDUR-Arch.jpg)
 
 ### CAL
 
