@@ -106,7 +106,7 @@ detach:  false
 port:    4000
 host:    127.0.0.1
 baseurl: "/" # the subpath of your site, e.g. /blog/
-url: "http://blog.sanwenkit.com" # the base hostname & protocol for your site
+url: "https://sanwenkit.github.io/jekyll-omega-theme/" # the base hostname & protocol for your site
 
 # Backwards-compatibility
 relative_permalinks: false
