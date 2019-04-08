@@ -1,2 +1,3 @@
 #set($e="e")
-$e.getClass().forName('java.lang.Runtime').getMethod('getRuntime').invoke(null).getMethod('exec').toString()
+#set($runtime=$e.getClass().forName('java.lang.Runtime').getMethod('getRuntime').invoke(null))
+$runtime.getMethod('exec').toString()
